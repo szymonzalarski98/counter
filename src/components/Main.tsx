@@ -3,6 +3,7 @@ import { View, Text, StyleSheet  } from 'react-native';
 import { useSelector } from 'react-redux';
 import Display from './Display';
 import IncrementButton from './IncrementButton';
+import DecrementButton from './DecrementButton';
 
 const Main = () => {
     const counter = useSelector((state: { counter: number; }) => state.counter);
@@ -10,6 +11,7 @@ const Main = () => {
         <View style={styles.container}>
             <Display counter={counter} />
             <View style={styles.wrapper}>
+                <DecrementButton counter={counter} />
                 <IncrementButton counter={counter} />
             </View>
         </View>
